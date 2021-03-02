@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  box-shadow: 1px 1px 20px #c9c9c9;
+  margin-bottom: 1em;
+  position: fixed;
+  z-index: 10;
+  background: white;
+  width: 100%;
+
+  nav {
+    width: 100%;
+    padding: 0.5em 0;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+
+      li {
+        margin: 0 3em;
+        a {
+          text-decoration: none;
+          color: #007500;
+        }
+
+        &:last-child {
+          a {
+            border: 1px solid #007500;
+            padding: 0.3em 2em;
+            border-radius: 4px;
+            color: #007500;
+
+            &:hover {
+              background: #242424;
+              color: #dadada;
+            }
+          }
+        }
+      }
+    }
+  }
+}

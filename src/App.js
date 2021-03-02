@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ContactForm from "./components/Contact-form";
+import { ClippyProvider } from "@react95/clippy";
+import Footer from "./components/Footer";
+import Countdown from "./components/Countdown";
+import Header from "./components/Header";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ClippyProvider>
+        <Header />
+        <Countdown
+          timeTillDate="03 31 2021, 12:00 pm"
+          timeFormat="MM DD YYYY, h:mm a"
+        />
+        <ContactForm />
+      </ClippyProvider>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
